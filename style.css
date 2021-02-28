@@ -172,3 +172,36 @@ img {
 .menu-principal .current_page_item{
         border-bottom: 3px solid var(--colorPrimario);
 }
+
+/** Reescribir estilos menú móvil **/
+.slicknav_menu {
+    background-color: var(--grisOscuro);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .slicknav_menu { 
+        display: none; /* no se muestra en tamaños grandes*/
+    }
+}
+
+.slicknav_btn {
+    background-color: var(--colorPrimario);
+    margin: 1.5rem 0 3rem;
+    padding: 1.5rem;
+}
+
+.slicknav_nav a {
+    font-size: 2.4rem;
+    text-align: center;
+    font-family: var(--fuentePrincipal)
+}
+
+.slicknav_nav a:hover {
+    background: transparent;
+    color: var(--colorPrimario);
+}
+
+

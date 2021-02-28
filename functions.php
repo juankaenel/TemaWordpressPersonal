@@ -18,9 +18,14 @@ function personalPage_scripts_styles(){
     wp_enqueue_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '8.0.1');
     // google font
     wp_enqueue_style('googleFont',"https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700;900&family=Staatliches&display=swap", array(), '1.0.0'); 
-
-     // hoja de estilo principal
+    // slick nav
+    wp_enqueue_style('slicknavCSS', get_template_directory_uri() . '/css/slicknav.min.css', array(), '1.0.0');
+    // hoja de estilo principal
      wp_enqueue_style('style',get_stylesheet_uri(), array('normalize','googleFont'), '1.0.0'); // hoja des estilo, url hoja de, array de dependecias, versión
-    
+    // javascript slick
+    wp_enqueue_script('slicknavJS', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array('jquery'), '1.0.0', true); 
+    // scripts
+    wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery','slicknavJS'), '1.0.0', true); 
+
 }
 add_action('wp_enqueue_scripts', 'personalPage_scripts_styles');  // hook, wp_head()-> función que se encuentra en el header.php se encarga de cargar enqueue_scripts y así ya está funcionando la hoja de estilos

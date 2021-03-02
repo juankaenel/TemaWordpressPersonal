@@ -18,6 +18,8 @@ function personalPage_scripts_styles(){
     wp_enqueue_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '8.0.1');
     // google font
     wp_enqueue_style('googleFont',"https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700;900&family=Staatliches&display=swap", array(), '1.0.0'); 
+    // fontawasome
+    wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' );
     // slick nav
     wp_enqueue_style('slicknavCSS', get_template_directory_uri() . '/css/slicknav.min.css', array(), '1.0.0');
     // hoja de estilo principal
@@ -29,3 +31,13 @@ function personalPage_scripts_styles(){
 
 }
 add_action('wp_enqueue_scripts', 'personalPage_scripts_styles');  // hook, wp_head()-> función que se encuentra en el header.php se encarga de cargar enqueue_scripts y así ya está funcionando la hoja de estilos
+
+// Widgets
+function personalPage_widgets(){
+    register_sidebar(array(
+        'name' => __('Footer Widgets'),
+        'id' => ('footer_widget'),
+        'description' => 'Widgets para el Footer',
+    ));
+}
+add_action('widgets_init', 'personalPage_widgets');

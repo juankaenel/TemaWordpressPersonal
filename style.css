@@ -80,6 +80,9 @@ img {
     width: 95%; 
     margin: 0 auto;
 }
+hr {
+    border: 1px solid var(--grisOscuro)
+}
 
 /** Header **/
 .site-header{
@@ -96,6 +99,20 @@ img {
     display: flex;
     justify-content: center;
     padding: 1rem 0rem 0rem 0rem;
+}
+.logo img{
+    width: 85%;
+    -webkit-transform:scale(1);
+    transform:scale(1);
+    transition: 0.3s ease-in-out;
+}
+
+.logo img:hover{
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+    overflow:hidden;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 /** Menú principal **/
@@ -204,4 +221,56 @@ img {
     color: var(--colorPrimario);
 }
 
+/** Footer **/
+.site-footer{
+    background-color: var(--grisOscuro);
+}
 
+/*PC*/
+@media (min-width: 768px){
+    .contenido-footer{
+        display: flex;
+        justify-content: space-between;
+       color: var(--blanco);
+        font-weight: bold;
+        padding:2.5rem;
+    }
+    .copyright p{
+        text-align: center;
+        font-size: 3rem;
+    }
+}
+
+.contenido-footer{
+    flex-wrap: wrap;
+    color: var(--blanco);
+    font-weight: bold;
+    padding:2.5rem;
+}
+
+.redes-sociales{
+    display: flex;
+    justify-content: center;
+}
+
+.copyright p{
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+
+.redes-sociales a{
+    padding: 1rem;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 3rem;
+	transition: 0.3s;
+}
+
+.redes-sociales a:hover{
+    color: var(--colorPrimario);
+    transition: 0.3s;
+    /* background: #393E46; */
+    font-size: 3.2rem;
+    cursor: pointer;
+}

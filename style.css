@@ -84,6 +84,22 @@ hr {
     border: 1px solid var(--grisOscuro)
 }
 
+.imagen-destacada {
+    margin-bottom: 3rem;
+}
+
+/** Utilidades **/
+.text-center{
+    text-align: center;
+}
+.texto-primario{
+    color:var(--colorPrimario);
+}
+.seccion{
+    padding: 3rem 0;
+}
+
+
 /** Header **/
 .site-header{
     background-color: var(--grisOscuro);
@@ -226,7 +242,6 @@ hr {
     background-color: var(--grisOscuro);
 }
 
-/*PC*/
 @media (min-width: 768px){
     .contenido-footer{
         display: flex;
@@ -273,4 +288,32 @@ hr {
     /* background: #393E46; */
     font-size: 3.2rem;
     cursor: pointer;
+}
+
+/** Páginas **/
+.pagina h1{
+    margin-bottom: 4rem;
+}
+
+@media(min-width: 768px){
+    .pagina.con-sidebar {
+        display: flex;
+        justify-content: space-between;
+    }
+    .con-sidebar .contenido-principal{
+        flex: 0 0 calc(65% - 2rem);
+    }
+    .con-sidebar .sidebar {
+        flex: 0 0 calc(35% - 2rem);
+    }
+}
+
+/** No sidebar **/
+.con-sidebar{
+    display: flex;
+    justify-content: center;
+}
+
+.no-sidebar .contenido-principal{
+    flex: 0 1 800px;
 }

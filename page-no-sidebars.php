@@ -1,6 +1,9 @@
-<!-- Plantilla predeterminada -->
-<?php get_header(); ?>
-    <main class="contenedor pagina seccion con-sidebar">
+<?php 
+/*
+* Template Name: Contenido centrado (No sidebar)
+*/
+    get_header(); ?>
+    <main class="contenedor pagina seccion no-sidebar">
         <div class="contenido-principal">
             <?php while( have_posts() ): the_post(); ?>   
                 <h1 class="text-center texto-primario"> <?php the_title();   ?> </h1>

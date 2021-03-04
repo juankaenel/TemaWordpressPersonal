@@ -11,7 +11,7 @@ function personalPage_lista_cursos(){ ?>
             /* Recorremos todos los cursos de la bd */
             while( $cursos->have_posts()): $cursos->the_post();?>
 
-            <li class="curso card">
+            <li class="curso card gradient">
                 <?php the_post_thumbnail('mediano'); ?>
                 <div class="contenido">
                     <a href="<?php the_permalink(); ?>">

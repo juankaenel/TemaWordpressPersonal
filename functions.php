@@ -49,12 +49,26 @@ function personalPage_scripts_styles(){
 }
 add_action('wp_enqueue_scripts', 'personalPage_scripts_styles');  // hook, wp_head()-> función que se encuentra en el header.php se encarga de cargar enqueue_scripts y así ya está funcionando la hoja de estilos
 
-// Widgets
+// Definir zona de widgets
 function personalPage_widgets(){
     register_sidebar(array(
-        'name' => __('Footer Widgets'),
-        'id' => ('footer_widget'),
-        'description' => 'Widgets para el Footer',
+        'name' => 'Sidebar 1',
+        'id' => 'sidebar_1',
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="text-center texto-primario">',
+        'after_title' => '</h3>',
+        'description' => 'Widgets para mostrar videos',
     ));
+    register_sidebar(array(
+        'name' => 'Sidebar 2',
+        'id' => 'sidebar_2',
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="text-center texto-primario">',
+        'after_title' => '</h3>',
+        'description' => 'Widgets para mostrar cursos',
+    ));
+
 }
 add_action('widgets_init', 'personalPage_widgets');

@@ -6,8 +6,6 @@
         </div>
         <!-- llamo al sidebar por defecto que es el 1, para los videos -->
         <?php get_sidebar();?> 
-        <?php get_sidebar('cursos');?> 
-
     </main>
 
 <?php get_footer(); ?>

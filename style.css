@@ -480,3 +480,70 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33000000', e
         color: var(--colorPrimario);
     }
 }
+
+/** Clases Sidebar **/
+.sidebar-curso{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--grisClaro);
+}    
+
+.sidebar-curso{
+    flex: 0 0 30%;
+}
+
+.sidebar-curso .imagen{
+    flex: 0 0 30%;
+}
+
+.sidebar-curso .imagen img{
+    display: block;
+} 
+
+.sidebar-curso:last-of-type{
+    border-bottom: none;
+}
+
+.sidebar-curso .contenido-curso{
+    flex: 0 0 calc(70% - 2rem);
+}
+
+.sidebar-curso .contenido-curso{
+    margin:0;
+    font-size: 2.2rem;
+}
+
+.sidebar-curso .contenido-curso h3{
+    margin: 0;
+    font-size: 2.4rem;
+}
+
+.sidebar-curso .contenido-curso a{
+    color: var(--colorPrimario);
+}
+
+.sidebar-curso .contenido-curso p{
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/** Sidebar **/
+.widget {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--grisClaro);
+}
+.widget:first-of-type {
+    padding-top: 0;
+}
+.widget:last-of-type {
+    border:none;
+}
+.widget a {
+    color: var(--negro);
+}
+.widget a:hover {
+    color: var(--colorPrimario);
+    font-weight: bold;
+}

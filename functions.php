@@ -8,6 +8,9 @@ function personalPage_setup(){
     // Hablitar imágenes destacadas
     add_theme_support('post-thumbnails');
 
+    // Hablitar títulos para seo
+    add_theme_support('title-tag');
+
     // Agregar imágenes de tamaño personalizado
     add_image_size( 'square', 350, 350, true);
     add_image_size( 'portrait', 350, 724, true);

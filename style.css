@@ -159,11 +159,32 @@ body.home .site-header{
     background-color: var(--grisOscuro);
 }
 @media (min-width: 768px){
-    .barra-navegacion{
+     .barra-navegacion{
         display: flex;
         justify-content: space-between;
     }
 }
+body.ft-activo{
+    margin-top: 4rem;
+}
+
+@media (min-width:768px){
+    .fixed-top{
+        position: fixed;
+        width: 100%;
+        top:0;
+        left:0;
+        background-color: var(--grisOscuro);
+        padding: 1rem 5rem;
+        height: 10rem;
+        z-index: 10000;
+        transition: all .3s ease;
+    }
+    .fixed-top img{
+        width:10rem;
+    }
+}
+
 
 .tag-line {
     color: var(--blanco);

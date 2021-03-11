@@ -1,11 +1,11 @@
 <?php
-function personalPage_lista_cursos(){ ?>
+function personalPage_lista_cursos($cantidad= -1){ ?>
     <ul class="lista-cursos">
         <?php
             $args = array(
                 'post_type' => 'personalPage_Cursos',
                 'posts_per_page' => 10,
-                'order_by' => 'title',
+                'order_by' => $cantidad,
             );
             $cursos = new WP_Query($args);
             /* Recorremos todos los cursos de la bd */
